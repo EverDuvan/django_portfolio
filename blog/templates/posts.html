@@ -32,7 +32,7 @@
     <a href="{%url 'blog:post_detail' post.id%}">{{post.title}}</a>
   </h2>
     <p>{{post.description|truncatechars:100}}</p>
-    <h2>{{post.date}}</h2>
+    <p>{{post.date|date:'d M y'|upper}}</p>
     <img src="{{post.image.url}}" alt="project.title">
     {% if project.url %}
     <a href="{{project.url}}">{{project.url}}</a>
