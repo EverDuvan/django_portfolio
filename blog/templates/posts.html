@@ -4,5 +4,17 @@
   </head>
   <body>
     <h1>BLOG</h1>
+    {% for post in posts%}
+    <h2>{{post.title}}</h2>
+    <h2>{{post.description}}</h2>
+    <h2>{{post.date}}</h2>
+    <img src="{{post.image.url}}" alt="project.title">
+    <a href="{{post.image.url}}">{{post.image.url}}</a>
+
+    {% if project.url %}
+    <a href="{{project.url}}">{{project.url}}</a>
+    {% endif %}
+
+    {%endfor%}
   </body>
 </html>
