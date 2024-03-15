@@ -23,24 +23,18 @@
 
   </head>
   <body>
-    <h1>BLOG</h1>
+    <h1>POST </h1>
 
-    
+{{post}}
+<h1> numero del post en db: {{post.id}}</h1>
 
-    {% for post in posts%}
-    <h2>
-    <a href="{%url 'blog:post_detail' post.id%}">{{post.title}}</a>
-  </h2>
-    <p>{{post.description|truncatechars:100}}</p>
-    <h2>{{post.date}}</h2>
-    <img src="{{post.image.url}}" alt="project.title">
-    {% if project.url %}
-    <a href="{{project.url}}">{{project.url}}</a>
-    {% endif %}
-
-
-
-    {%endfor%}
+<h2>{{post.title}}</h2>
+<h2>{{post.description}}</h2>
+<h2>{{post.date}}</h2>
+<img src="{{post.image.url}}" alt="project.title">
+{% if project.url %}
+<a href="{{project.url}}">{{project.url}}</a>
+{% endif %}
 
 
     <div class="github-link">
