@@ -1,7 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
   <head>
     <title>Primera Pagina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .github-link {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+
   </head>
+
+
   <body>
     <h1>HOME</h1>
     {% for project in projects%}
@@ -15,6 +37,13 @@
     {% endif %}
 
     {%endfor%}
+
+
+    <div class="github-link">
+      <a href="https://github.com/EverDuvan" target="_blank" rel="noopener noreferrer">
+          <strong>¡Mi GitHub! <img src="media/imgs/R.png" alt="Logo R" width="20"> &copy; Ever Duvan</strong>
+      </a>
+  </div>
 
   </body>
 </html>
