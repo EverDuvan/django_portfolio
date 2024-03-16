@@ -2,8 +2,9 @@
 <html lang="es">
 
   <head>
-    <title>Primera Pagina</title>
+    <title>Django Portfolio</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -23,21 +24,18 @@
 
   </head>
   <body>
-    <h1>BLOG</h1>
 
-    
 
-    {% for post in posts%}
-    <h2>
-    <a href="{%url 'blog:post_detail' post.id%}">{{post.title}}</a>
-  </h2>
-    <p>{{post.description|truncatechars:100}}</p>
-    <p>{{post.date|date:'d M y'|upper}}</p>
-    <img src="{{post.image.url}}" alt="project.title">
-    {% if project.url %}
-    <a href="{{project.url}}">{{project.url}}</a>
-    {% endif %}
-    {%endfor%}
+
+    <h1>Navbar</h1>
+
+
+    {% blog content%}
+    {% endblock %}
+
+    <footer>Footer</footer>
+
+
 
 
     <div class="github-link">
