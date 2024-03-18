@@ -7,13 +7,13 @@
     <header class="row bg-black">
         <div class="col-md-4 p-2">
     <img src="{% static "ed.jpg" %}" alt="" style="float: left; width: 280px; height: 280px; border-radius: 50%;">
+    <a href="{% static "Profile.pdf" %}" target=_blank
+    class="btn btn-primary btn-sm rounded-1 my-2">Download CV</a>
         </div>
         <div class="col-md-8 my-auto">
             <h1> I am <strong> Ever Duvan </strong> </h1>
-            <h3> I am a Python Developer </h3>
+            <h3> Python Developer </h3>
             <p> Desarrollador de software e Ingeniero industrial en formación con más de 2 años de experiencia en el área de desarrollo de software (Ciencia de Datos), con competencias para implementar estrategias de trabajo eficientes, mediante el aprovechamiento de recursos. Con capacidades para trabajar en equipo, excelente comunicación, capacidad analítica y eficiencia para obtener una mayor competitividad, productividad, calidad y autosostenibilidad de la organización, dispuesto a afrontar todos desafíos que se me presenten.</p>
-            <a href="{% static "Profile.pdf" %}" target=_blank
-            class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
         </div>
     </header>
     <title>Django Portfolio</title>
@@ -25,7 +25,7 @@
         {% for project in projects %}
         <div class="col-md-4 p-4">
           <div class="card bg-black card-project text-light">
-            <img src="{{project.image.url }}" class="card-img-top" />
+            <img src="{{project.image.url }}" class="card-img-top" style="float: left; width: auto; height: 280px;"/>
       
             <div class="card-body">
       
@@ -41,5 +41,17 @@
         </div>
         {% endfor %}
       </div>
+      <style>
+        /* Establecer una altura fija para las tarjetas */
+        .card {
+          height: 100%;
+        }
+        
+        /* Establecer un tamaño máximo para las imágenes */
+        .project-img {
+          max-width: 100%;
+          height: auto;
+        }
+      </style>
     </div> 
       {% endblock %}
