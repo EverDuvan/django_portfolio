@@ -1,13 +1,19 @@
 {% extends 'layout.html' %}
+
 {% block content %}
-<title>BLOG {{post}}</title>
 
-<h1> numero del post en db: {{post.id}}</h1>
+<div class="text-center">
 
-<h2>{{post.title}}</h2>
-<h2>{{post.description}}</h2>
-<h2>{{post.date}}</h2>
-<img src="{{post.image.url}}" alt="project.title">
-{% if project.url %}
-<a href="{{project.url}}">{{project.url}}</a>
-{% endif %}{% endblock %}
+  <h1>{{post.title}}</h1>
+  <h2 class="my-2 h5 text-muted">{{post.date|date:'F jS Y'}}</h2>
+
+  <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid">
+
+
+  <div class="my-4">
+
+  {{post.description|safe}}
+  </div>
+</div>
+
+{% endblock %}

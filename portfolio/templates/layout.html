@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static "main.css" %}">
     <style>
         body {
+            background-color: grey;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -30,7 +31,7 @@
     </style>
 </head>
 
-<body>
+<body class="text-light">
     <div class="container p-4">
     <!-- Incluye la barra de navegación aquí -->
     {% include 'partials/navbar.html' %}

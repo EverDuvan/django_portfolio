@@ -1,3 +1,17 @@
 body {
-    background: #37a03309;
+    background-color: #35353509;
 }
+
+.bg-black {
+    background-color: rgb(54, 54, 54);
+}
+
+.card-project:hover {
+    border: 1px solid rgb(196, 166, 166);
+    cursor: pointer;
+}
+
+.rounded-image {
+    border-radius: 50%;
+   }
+   
