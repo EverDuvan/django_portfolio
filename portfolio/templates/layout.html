@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,6 +11,7 @@
     rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "main.css" %}">
     <style>
         body {
             display: flex;
@@ -28,12 +31,13 @@
 </head>
 
 <body>
+    <div class="container p-4">
     <!-- Incluye la barra de navegación aquí -->
     {% include 'partials/navbar.html' %}
 
     <!-- Incluye el contenido del bloque "content" aquí -->
     {% block content %}{% endblock %}
-
+    </div>
     <footer>Footer</footer>
 
     <div class="github-link">
