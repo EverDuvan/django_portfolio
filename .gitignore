@@ -27,7 +27,6 @@ env
 *.so
 
 # Distribution / packaging
-/imgs
 .Python
 build/
 develop-eggs/
