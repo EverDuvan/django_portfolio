@@ -4,7 +4,8 @@ Este proyecto es un sitio web de portafolio personal construido con Django.
 Permite a los usuarios mostrar sus proyectos en la página principal y también 
 incluye una sección de blog para publicar posts.
 
-Características
+Características:
+
 Página principal: Muestra una lista de tus proyectos con detalles como nombre, descripción y enlaces.
 Página de blog: Publica tus posts sobre tecnología, desarrollo web o cualquier otro tema relevante.
 
@@ -19,11 +20,14 @@ Crea un superusuario: python manage.py createsuperuser
 Inicia el servidor: python manage.py runserver
 
 Uso:
+
 Accede a la página principal en http://localhost:8000/
 Administra tus proyectos y posts en http://localhost:8000/admin/
-Crea carpeta imgs dentro de la carpeta media, donde van los iconos
+Crea carpeta imgs dentro de la carpeta media (esta se crea al subir cualquier proyecto)
+donde van los iconos
 
-Contribuciones
+Contribuciones:
+
 Si deseas contribuir, ¡estamos abiertos a pull requests! 😊
 
 Licencia
