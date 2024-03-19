@@ -1,57 +1,51 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
     {% load static %}
     <div class="container p-4">
-    <header class="row bg-black">
-        <div class="col-md-4 p-2">
-    <img src="{% static "ed.jpg" %}" alt="" style="float: left; width: 280px; height: 280px; border-radius: 50%;">
-    <a href="{% static "Profile.pdf" %}" target=_blank
-    class="btn btn-primary btn-sm rounded-1 my-2">Download CV</a>
-        </div>
-        <div class="col-md-8 my-auto">
-            <h1> I am <strong> Ever Duvan </strong> </h1>
-            <h3> Python Developer </h3>
-            <p> Desarrollador de software e Ingeniero industrial en formación con más de 2 años de experiencia en el área de desarrollo de software (Ciencia de Datos), con competencias para implementar estrategias de trabajo eficientes, mediante el aprovechamiento de recursos. Con capacidades para trabajar en equipo, excelente comunicación, capacidad analítica y eficiencia para obtener una mayor competitividad, productividad, calidad y autosostenibilidad de la organización, dispuesto a afrontar todos desafíos que se me presenten.</p>
-        </div>
-    </header>
-    <title>Django Portfolio</title>
-
-    <div class="row my-4 text-center">
-        <h3>My Projects</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, aperiam?</p>
-      
-        {% for project in projects %}
-        <div class="col-md-4 p-4">
-          <div class="card bg-black card-project text-light">
-            <img src="{{project.image.url }}" class="card-img-top" style="float: left; width: auto; height: 280px;"/>
-      
-            <div class="card-body">
-      
-              <h2>{{ project.title }}</h2>
-              <p>{{ project.description }}</p>
-      
-              {% if project.url %}
-              <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="__blank" rel="noreferrer">Visit the
-                Project</a>
-              {% endif %}
+        <header class="row bg-dark">
+            <div class="col-md-4 p-2">
+                <img src="{% static "ed.jpg" %}" alt="" style="float: left; width: 280px; height: 280px; border-radius: 50%;">
+                <a href="{% static "Profile.pdf" %}" target="_blank" class="btn btn-outline-light btn-sm rounded-1 my-2">Download CV</a>
             </div>
-          </div>
+            <div class="col-md-8 my-auto">
+                <h1> I am <strong> Ever Duvan </strong> </h1>
+                <h3> Python Developer </h3>
+                <p> Desarrollador de software e Ingeniero industrial en formación con más de 2 años de experiencia en el área de desarrollo de software (Ciencia de Datos), con competencias para implementar estrategias de trabajo eficientes, mediante el aprovechamiento de recursos. Con capacidades para trabajar en equipo, excelente comunicación, capacidad analítica y eficiencia para obtener una mayor competitividad, productividad, calidad y autosostenibilidad de la organización, dispuesto a afrontar todos desafíos que se me presenten.</p>
+            </div>
+        </header>
+        <title>Django Portfolio</title>
+
+        <div class="row my-4 text-center">
+            <h3>My Projects</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, aperiam?</p>
+
+            {% for project in projects %}
+            <div class="col-md-4 p-4">
+                <a href="{{ project.url }}" target="_blank" rel="noreferrer" class="text-decoration-none">
+                    <div class="card bg-black card-project text-light">
+                        <img src="{{ project.image.url }}" class="card-img-top" style="float: left; width: auto; height: 280px;"/>
+
+                        <div class="card-body">
+                            <h2>{{ project.title }}</h2>
+                            <p>{{ project.description }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-      </div>
-      <style>
-        /* Establecer una altura fija para las tarjetas */
-        .card {
-          height: 100%;
-        }
-        
-        /* Establecer un tamaño máximo para las imágenes */
-        .project-img {
-          max-width: 100%;
-          height: auto;
-        }
-      </style>
-    </div> 
-      {% endblock %}
+        <style>
+            /* Establecer una altura fija para las tarjetas */
+            .card {
+                height: 100%;
+            }
+
+            /* Establecer un tamaño máximo para las imágenes */
+            .project-img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </div>
+{% endblock %}
