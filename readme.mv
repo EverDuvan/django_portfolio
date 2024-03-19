@@ -1,39 +1,28 @@
-Proyecto: CRUD Django Restframework
+Django Portfolio
 
-Descripción
-Este proyecto es una aplicación web que permite a los usuarios ver, crear, actualizar y eliminar. 
-Utiliza Django para el backend (API REST)
+Este proyecto es un sitio web de portafolio personal construido con Django. 
+Permite a los usuarios mostrar sus proyectos en la página principal y también 
+incluye una sección de blog para publicar posts.
 
-Instalación y Configuración
-Backend (Django):
-Clona este repositorio:
-git clone https://github.com/EverDuvan/.........
+Características
+Página principal: Muestra una lista de tus proyectos con detalles como nombre, descripción y enlaces.
+Página de blog: Publica tus posts sobre tecnología, desarrollo web o cualquier otro tema relevante.
 
-Crea un entorno virtual y actívalo:
-python -m venv env (windows)     python3 -m venv env (linux)
-env\Scripts\activate(windows)    source env/bin/activate (linux)
+Instalación:
 
-Instala las dependencias:
-pip install -r requirements.txt
+Clona este repositorio: git clone https://github.com/EverDuvan/django_portfolio.git
+Crea un entorno virtual: python -m venv venv
+Activa el entorno virtual: source venv/bin/activate
+Instala las dependencias: pip install -r requirements.txt
+Ejecuta las migraciones: python manage.py migrate
+Crea un superusuario: python manage.py createsuperuser
+Inicia el servidor: python manage.py runserver
 
-Ejecuta las migraciones:
-python manage.py migrate
-Inicia el servidor:
-python manage.py runserver.
+Uso:
+Accede a la página principal en http://localhost:8000/
+Administra tus proyectos y posts en http://localhost:8000/admin/
+Contribuciones
+Si deseas contribuir, ¡estamos abiertos a pull requests! 😊
 
-
-Estructura del Proyecto
-backend/
-settings.py: Configuración de la aplicación Django.
-models.py: Modelos para los tutoriales.
-views.py: Vistas basadas en clases para las API REST.
-
-Ejecución del Proyecto
-Inicia el servidor Django: 
-python manage.py runserver.
-
-Contribución y Licencia
-Si deseas contribuir, crea una rama y envía una solicitud de extracción.
-
-Recursos Adicionales
-Django Rest Framework
+Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
