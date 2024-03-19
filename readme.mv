@@ -21,8 +21,10 @@ Inicia el servidor: python manage.py runserver
 Uso:
 Accede a la página principal en http://localhost:8000/
 Administra tus proyectos y posts en http://localhost:8000/admin/
+Crea carpeta imgs dentro de la carpeta media, donde van los iconos
+
 Contribuciones
 Si deseas contribuir, ¡estamos abiertos a pull requests! 😊
 
 Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo Licencia 
